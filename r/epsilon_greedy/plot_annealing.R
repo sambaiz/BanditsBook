@@ -1,7 +1,7 @@
 library("plyr")
 library("ggplot2")
 
-results <- read.csv("julia/algorithms/epsilon_greedy/annealing_results.csv", header = FALSE)
+results <- read.csv("python/algorithms/epsilon_greedy/annealing_results.csv", header = FALSE)
 names(results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 
 # Plot average reward as a function of time.
@@ -20,7 +20,7 @@ ggsave("r/graphs/annealing_epsilon_greedy_average_reward.pdf")
 # In this instance, 5 is the correct arm.
 stats <- ddply(results,
                c("T"),
-               function (df) {mean(df$ChosenArm == 5)})
+               function (df) {mean(df$ChosenArm == 1)})
 ggplot(stats, aes(x = T, y = V1)) +
   geom_line() +
   ylim(0, 1) +

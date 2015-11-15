@@ -21,7 +21,7 @@ ggsave("r/graphs/standard_epsilon_greedy_average_reward.pdf")
 # In this instance, 5 is the correct arm.
 stats <- ddply(results,
                c("Epsilon", "T"),
-               function (df) {mean(df$ChosenArm == 5)})
+               function (df) {mean(df$ChosenArm == 1)})
 ggplot(stats, aes(x = T, y = V1, group = Epsilon, color = Epsilon)) +
   geom_line() +
   ylim(0, 1) +

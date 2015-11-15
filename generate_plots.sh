@@ -17,7 +17,7 @@
 
 cd python
 PYTHONPATH=. python algorithms/epsilon_greedy/test_standard.py
-# python algorithms/epsilon_greedy/test_annealing.py
+PYTHONPATH=. python algorithms/epsilon_greedy/test_annealing.py
 # python algorithms/softmax/test_standard.py
 # python algorithms/softmax/test_annealing.py
 # python algorithms/ucb/test_ucb1.py
@@ -31,7 +31,7 @@ cd ..
 
 mkdir r/graphs
 Rscript r/epsilon_greedy/plot_standard.R
-# Rscript r/epsilon_greedy/plot_annealing.R
+Rscript r/epsilon_greedy/plot_annealing.R
 # Rscript r/softmax/plot_standard.R
 # Rscript r/softmax/plot_annealing.R
 # Rscript r/ucb/plot_ucb1.R
